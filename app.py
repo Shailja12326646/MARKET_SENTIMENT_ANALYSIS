@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
 import plotly.express as px
 
 # Streamlit page configuration
@@ -189,7 +187,7 @@ elif page == "Daily Trade Summary":
         💸 <b>Total Fee Paid:</b> ${total_fee:,.4f} <br><br>
 
         <b>Side Breakdown:</b><br>
-        <br>🔼<b>Buy PnL:</b> ${buy_pnl:,.2f}
+        <br>🔼<b>Buy PnL: ${buy_pnl:,.2f}
         🔽Sell PnL: ${sell_pnl:,.2f}
         </div>
         """, unsafe_allow_html=True)
