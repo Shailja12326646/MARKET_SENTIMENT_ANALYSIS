@@ -14,7 +14,7 @@ def load_data(sdf_path=None, tdf_path=None, sdf_file=None, tdf_file=None):
     try:
         # Load data from file paths or uploaded files
         if sdf_file is not None and tdf_file is not None:
-            sdf = pd.read_csv('C:\\Users\\hp\\Desktop\\assignment\\fear_greed_index.csv')
+            sdf = pd.read_csv('https://github.com/Shailja12326646/MARKET_SENTIMENT_ANALYSIS/blob/main/fear_greed_index.csv')
             tdf = pd.read_csv('https://github.com/Shailja12326646/MARKET_SENTIMENT_ANALYSIS/releases/download/datasetv1/historical_data.csv')
         else:
             sdf = pd.read_csv('C:\\Users\\hp\\Desktop\\assignment\\fear_greed_index.csv')
