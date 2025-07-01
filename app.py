@@ -14,11 +14,13 @@ def load_data(sdf_path=None, tdf_path=None, sdf_file=None, tdf_file=None):
     try:
         # Load data from file paths or uploaded files
         if sdf_file is not None and tdf_file is not None:
-            sdf = pd.read_csv('https://raw.githubusercontent.com/Shailja12326646/MARKET_SENTIMENT_ANALYSIS/refs/heads/main/fear_greed_index.csv')
+            sdf = pd.read_csv('https://raw.githubusercontent.com/Shailja12326646/MARKET_SENTIMENT_ANALYSIS/main/fear_greed_index.csv')
             tdf = pd.read_csv('https://github.com/Shailja12326646/MARKET_SENTIMENT_ANALYSIS/releases/download/datasetv1/historical_data.csv')
+
         else:
-            sdf = pd.read_csv('C:\\Users\\hp\\Desktop\\assignment\\fear_greed_index.csv')
-            tdf = pd.read_csv('C:\\Users\\hp\\Desktop\\assignment\\historical_data.csv')
+            sdf = pd.read_csv('https://raw.githubusercontent.com/Shailja12326646/MARKET_SENTIMENT_ANALYSIS/main/fear_greed_index.csv')
+            tdf = pd.read_csv('https://github.com/Shailja12326646/MARKET_SENTIMENT_ANALYSIS/releases/download/datasetv1/historical_data.csv')
+
         
         # Validate required columns
         required_sdf_cols = ['date', 'classification']
@@ -53,8 +55,8 @@ sdf_file = st.sidebar.file_uploader("Upload fear_greed_index.csv", type="csv")
 tdf_file = st.sidebar.file_uploader("Upload historical_data.csv", type="csv")
 
 # Try loading from default paths or uploaded files
-default_sdf_path = 'https://github.com/Shailja12326646/MARKET_SENTIMENT_ANALYSIS/blob/main/fear_greed_index.csv'
-default_tdf_path = r'C:\Users\hp\Desktop\assignment\historical_data.csv'
+default_sdf_path = 'https://raw.githubusercontent.com/Shailja12326646/MARKET_SENTIMENT_ANALYSIS/main/fear_greed_index.csv'
+default_tdf_path = 'https://github.com/Shailja12326646/MARKET_SENTIMENT_ANALYSIS/releases/download/datasetv1/historical_data.csv'
 
 if sdf_file and tdf_file:
     mdf = load_data(sdf_file=sdf_file, tdf_file=tdf_file)
