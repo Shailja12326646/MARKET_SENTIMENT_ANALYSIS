@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 import plotly.express as px
 
 # Streamlit page configuration
@@ -13,7 +15,7 @@ def load_data(sdf_path=None, tdf_path=None, sdf_file=None, tdf_file=None):
         # Load data from file paths or uploaded files
         if sdf_file is not None and tdf_file is not None:
             sdf = pd.read_csv('C:\\Users\\hp\\Desktop\\assignment\\fear_greed_index.csv')
-            tdf = pd.read_csv('C:\\Users\\hp\\Desktop\\assignment\\historical_data.csv')
+            tdf = pd.read_csv('https://github.com/Shailja12326646/MARKET_SENTIMENT_ANALYSIS/releases/download/datasetv1/historical_data.csv')
         else:
             sdf = pd.read_csv('C:\\Users\\hp\\Desktop\\assignment\\fear_greed_index.csv')
             tdf = pd.read_csv('C:\\Users\\hp\\Desktop\\assignment\\historical_data.csv')
